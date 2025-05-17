@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 231 48% 48%;
+  --primary-foreground: 211 100% 99%;
+  --primary-light: 231 71% 65%;
+  --primary-dark: 231 48% 38%;
+  --secondary: 189 100% 38%;
+  --secondary-foreground: 24 9.8% 10%;
+  --secondary-light: 187 92% 69%;
+  --secondary-dark: 189 100% 28%;
+  --accent: 267 100% 65%;
+  --accent-foreground: 24 9.8% 10%;
+  --accent-light: 267 77% 72%;
+  --accent-dark: 267 74% 45%;
+  --success: 122 39% 49%;
+  --error: 0 84.2% 60.2%;
+  --error-foreground: 60 9.1% 97.8%;
+  --warning: 38 92% 50%;
+  --neutral-100: 0 0% 96%;
+  --neutral-200: 0 0% 88%;
+  --neutral-300: 0 0% 62%;
+  --neutral-400: 0 0% 26%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 231 48% 48%;
+  --primary-foreground: 211 100% 99%;
+  --primary-light: 231 71% 65%;
+  --primary-dark: 231 48% 38%;
+  --secondary: 189 100% 38%;
+  --secondary-foreground: 0 0% 98%;
+  --secondary-light: 187 92% 69%;
+  --secondary-dark: 189 100% 28%;
+  --accent: 267 100% 65%;
+  --accent-foreground: 0 0% 98%;
+  --accent-light: 267 77% 72%;
+  --accent-dark: 267 74% 45%;
+  --success: 122 39% 49%;
+  --error: 0 62.8% 30.6%;
+  --error-foreground: 0 0% 98%;
+  --warning: 38 92% 50%;
+  --neutral-100: 0 0% 96%;
+  --neutral-200: 0 0% 88%;
+  --neutral-300: 0 0% 62%;
+  --neutral-400: 0 0% 26%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-[hsl(var(--neutral-100))] text-foreground;
+  }
+
+  .loading-dots:after {
+    content: '.';
+    animation: dots 1.5s steps(5, end) infinite;
+  }
+  
+  @keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60% { content: '...'; }
+    80%, 100% { content: ''; }
+  }
+}
