@@ -41,17 +41,6 @@ A decentralized voting application built on Ethereum blockchain technology. This
    ```
    # Install root dependencies
    npm install
-
-   # Install client dependencies
-   cd client
-   npm install
-   cd ..
-   ```
-
-3. Create a `.env` file in the root directory with the following variables:
-   ```
-   HARDHAT_CHAIN_ID=31337
-   PRIVATE_KEY=your_private_key_here
    ```
 
 ## Running the Application
