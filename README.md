@@ -72,14 +72,13 @@ npx hardhat run scripts/deploy.cjs --network localhost
 
 Note the contract address that is output after deployment.
 
-### Start the Frontend
+### Start the entire app in one command
 
 ```
-cd client
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`
+The application will be available at `http://localhost:3001`
 
 ## Using the Application
 
@@ -127,32 +126,7 @@ If you make changes to the smart contract:
 
 3. Update the contract address in your frontend code if needed.
 
-### Running Tests
-
-```
-npx hardhat test
-```
-
-## Deployment to a Public Network
-
-To deploy to a public network like Ethereum Mainnet, Goerli, or Sepolia:
-
-1. Update your `.env` file with the appropriate variables:
-   ```
-   PRIVATE_KEY=your_private_key_here
-   INFURA_API_KEY=your_infura_api_key
-   ```
-
-2. Deploy to the desired network:
-   ```
-   npx hardhat run scripts/deploy.cjs --network goerli
-   ```
-
-3. Update the contract address and network in your frontend code.
-
 ## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contributing
 
