@@ -1,6 +1,5 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
 import { exec } from "child_process";
 
 // This function runs the Hardhat node to simulate a local blockchain
